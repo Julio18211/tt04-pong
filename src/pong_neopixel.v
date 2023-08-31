@@ -11,6 +11,7 @@ module tt_um_pong_neopixel(
 	
 	wire start;
 	wire driver;
+	wire clock;
 
 	wire p1_up;
 	wire p1_down;
@@ -85,14 +86,14 @@ module tt_um_pong_neopixel(
 	assign driver_out = (signal_sel)? signal_1 : signal_0;  
 	assign driver     = (res_signal)? 1'b0 : driver_out;
 	assign uo_out[0]  = driver;
-
+	assign clock      = clk;
     //posición de la paleta izquieda, ultimo led encendido (ancho 4)
     reg [2:0] pos_izq;
 
     //posición de la paleta derecha, ultimo led encendido (ancho 4)
     reg [2:0] pos_der;
 		
-	always@(posedge clk) begin
+	always@(posedge clock) begin
 		
 	
 		// condiciones iniciales
