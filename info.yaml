@@ -6,8 +6,8 @@ project:
 # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. 
 # Source files must be in ./src and you must list each source file separately
  source_files:        
-   - debounce.v
    - pong_neopixel.v
+   - debounce.v
    - slow_clock.v
    - wave_shape.v
  top_module:  "tt_um_pong_neopixel"      # Put the name of your top module here, must start with "tt_um_". Make it unique by including your github username
@@ -25,7 +25,7 @@ yaml_version: 4
 documentation: 
   author:       "Angel Orellana"      # Your name
   title:        "Angardo's pong"      # Project title
-  language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
+  language:     "Verilog"             # other examples include Verilog, Amaranth, VHDL, etc
   description:  "Is a pong game"      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
@@ -43,13 +43,22 @@ documentation:
     - p1_down
     - p2_up
     - p2_down
+    - none
+    - none
+    - none
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
     - driver
-
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
 # The following fields are optional
   tag:          "game"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
-  external_hw:  ""      # Describe any external hardware needed
+  external_hw:  "none"      # Describe any external hardware needed
   discord:      ""      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     10000000       # Clock frequency in Hz (if required)
