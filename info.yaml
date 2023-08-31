@@ -30,11 +30,15 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-      Explain how your project works
+      Este es un juego de pong, el cual utiliza una matriz led neopixel de 8x8 para su visualización, los controles
+      son 2 pushbuttons para cada jugador, estos deben ser conectados con resistencias pull-up, asi como un boton para
+      el inicio del juego. El reset es low active, es decir que se activa al momento de aplicar un 0 lógico. 
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Explain how to test your project
+      conectar los 5 botones con resistencias pull-up, mas una matriz de 8x8 neopixel al pin driver_neopixel. enviar una señal de reset
+      al momento que un jugador anote un punto, la pelota se pondrá en su posición original, para iniciar nuevamente presionar el boton
+      conectado start.
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
@@ -48,7 +52,7 @@ documentation:
     - none
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - driver
+    - driver_neopixel
     - none
     - none
     - none
@@ -67,7 +71,7 @@ documentation:
     - none
 # The following fields are optional
   tag:          "game"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
-  external_hw:  "none"      # Describe any external hardware needed
+  external_hw:  "5 pushbutton, 8x8 neopixel matrix"      # Describe any external hardware needed
   discord:      ""      # Your discord handle, used for communication and automatically assigning tapeout role after a submission
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     10000000       # Clock frequency in Hz (if required)
