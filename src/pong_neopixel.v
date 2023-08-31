@@ -12,6 +12,7 @@ module tt_um_pong_neopixel(
 	wire start;
 	wire driver;
 	wire clock;
+	wire driver_out;
 
 	wire p1_up;
 	wire p1_down;
@@ -67,12 +68,12 @@ module tt_um_pong_neopixel(
 	assign p2_up   = ui_in[3];
 	assign p2_down = ui_in[4];
 	
-	assign uio_out[0:7] = 8'b00000000;
-	assign uio_oe[0:7]  = 8'b00000000;
-	assign uo_out[1:7]  = 7'b0000000;
+	assign uio_out[7:0] = 8'b00000000;
+	assign uio_oe[7:0]  = 8'b00000000;
+	assign uo_out[7:1]  = 7'b0000000;
 
-	wave_shape U2(clk_5,rst_n,signal_1,signal_0);//generar la señal a enviar
-	slow_clk   U3(clk_5,slow,pelota_clk);
+	wave_shape U2(clock,rst_n,signal_1,signal_0);//generar la señal a enviar
+	slow_clk   U3(clock,slow,pelota_clk);
 	
 	debounce U4(p1_up,slow,p1_up_debounced);
 	debounce U5(p1_down,slow,p1_down_debounced);

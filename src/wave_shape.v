@@ -25,4 +25,3 @@ module wave_shape(input clk, reset, output reg wave_one, wave_zero);
 	end
 
 endmodule
-
