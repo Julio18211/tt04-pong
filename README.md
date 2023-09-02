@@ -1,4 +1,4 @@
- This is a pong game, it uses a neopixel led matrix 8x8 as display. To control the game, each player has two push buttons 
+ This the Pong game, it uses a neopixel led matrix 8x8 as display. To control the game, each player has two push buttons 
       to move up and down the paddle, an extra push button is used to start the game. The game ends when the ball touch the left
       or the right side of the matrix. To set the initial conditions of the game press the reset button.
 
